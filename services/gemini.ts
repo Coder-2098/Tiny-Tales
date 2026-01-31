@@ -161,5 +161,59 @@ export const GeminiService = {
       }
       return undefined;
     });
+  },
+
+  generateStoryVideo: async (story: Story, onProgress?: (msg: string) => void): Promise<string> => {
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
+    // 1. Generate a summarized prompt for Veo
+    onProgress?.("Writing a magic movie script...");
+    const summaryResponse = await ai.models.generateContent({
+      model: APP_CONFIG.MODELS.STORY_GENERATION,
+      contents: `Summarize this children's story into a single, highly visual, 15-word animation prompt for a cartoon movie:
+      STORY: ${story.scenes.map(s => s.text).join(' ')}`,
+      config: { temperature: 0.7 }
+    });
+    
+    const videoPrompt = `In a 3D Pixar-style cartoon animation: ${summaryResponse.text?.trim() || 'A magical adventure unfolding in a vibrant world.'}`;
+    
+    // 2. Start Video Generation
+    onProgress?.("Mixing the magical colors...");
+    let operation = await ai.models.generateVideos({
+      model: 'veo-3.1-fast-generate-preview',
+      prompt: videoPrompt,
+      config: {
+        numberOfVideos: 1,
+        resolution: '720p',
+        aspectRatio: '16:9'
+      }
+    });
+
+    const messages = [
+      "Stirring the imagination soup...",
+      "Painting the tiny details...",
+      "Teaching the characters to dance...",
+      "Polishing the magical sparkles...",
+      "Almost ready for the big screen!",
+      "Checking the popcorn machine...",
+      "Adding final bits of magic..."
+    ];
+    let msgIdx = 0;
+
+    // 3. Poll for completion
+    while (!operation.done) {
+      await new Promise(resolve => setTimeout(resolve, 8000));
+      onProgress?.(messages[msgIdx % messages.length]);
+      msgIdx++;
+      operation = await ai.operations.getVideosOperation({ operation: operation });
+    }
+
+    const downloadLink = operation.response?.generatedVideos?.[0]?.video?.uri;
+    if (!downloadLink) throw new Error("Video failed to spark!");
+
+    // 4. Fetch the final video
+    const response = await fetch(`${downloadLink}&key=${process.env.API_KEY}`);
+    const blob = await response.blob();
+    return URL.createObjectURL(blob);
   }
 };

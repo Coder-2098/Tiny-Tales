@@ -13,94 +13,94 @@ export const AVATARS = [
   { id: 'unicorn', name: 'Unicorn', url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="%23f5f3ff"/><text y=".85em" x="5" font-size="80">🦄</text></svg>' },
 ];
 
+export const STORY_STARTERS = [
+  "A brave puppy finds a hidden map in the garden...",
+  "A tiny robot accidentally lands on a planet made of candy...",
+  "A cat discovers she can talk to birds in the park...",
+  "A magical paintbrush brings every drawing to life...",
+  "A group of squirrels builds a secret treehouse city...",
+  "An explorer finds a door in the attic that leads to a forest...",
+  "A friendly dragon who is afraid of fire but loves to bake cakes...",
+  "A little owl who decides to stay awake during the day...",
+];
+
 export const TEMPLATES: StoryTemplate[] = [
   {
-    id: 'space',
+    id: 'chocolate',
+    name: 'Chocolate Factory',
+    icon: '🍫',
+    description: 'A world of rivers of fudge and candy clouds!',
+    character: 'A clever inventor with a purple hat',
+    setting: 'The Gigantic Wonky Chocolate Factory',
+    goal: 'Find the recipe for the Never-Ending Lollipop',
+    mood: 'Yummy & Fun',
+    color: 'from-amber-800 to-orange-500'
+  },
+  {
+    id: 'honey_forest',
+    name: 'Honey Bear Forest',
+    icon: '🍯',
+    description: 'Visit a silly old bear in a sunny woods!',
+    character: 'A friendly yellow bear with a red shirt',
+    setting: 'The Hundred-Acre Sunbeam Forest',
+    goal: 'Find a missing pot of sweet golden honey',
+    mood: 'Sweet & Calm',
+    color: 'from-yellow-400 to-amber-600'
+  },
+  {
+    id: 'berry_village',
+    name: 'Berry Sweet Village',
+    icon: '🍓',
+    description: 'Everything here smells like fresh fruit!',
+    character: 'A girl with a big pink hat and red curls',
+    setting: 'The Strawberry Patch Village',
+    goal: 'Bake the biggest berry pie for the festival',
+    mood: 'Happy & Bright',
+    color: 'from-rose-500 to-pink-400'
+  },
+  {
+    id: 'space_quest',
     name: 'Space Adventure',
     icon: '🚀',
-    description: 'Explore distant planets!',
-    character: 'A brave astronaut named Ziggy',
-    setting: 'A sparkling crystal planet',
-    goal: 'Find the lost Star Crystal',
-    mood: 'Exciting',
-    color: 'bg-indigo-900 border-indigo-500 text-white'
+    description: 'Blast off past the stars and moon!',
+    character: 'Ziggy the brave star-pilot',
+    setting: 'The Galaxy of Sparkling Planets',
+    goal: 'Fix the spaceship and return to Earth',
+    mood: 'Exciting & Grand',
+    color: 'from-indigo-900 to-blue-600'
   },
   {
-    id: 'jungle',
-    name: 'Jungle Quest',
-    icon: '🐒',
-    description: 'Rescue wild friends!',
-    character: 'A swift ranger',
-    setting: 'The Great Green Forest',
-    goal: 'Find the backwards waterfall',
-    mood: 'Brave',
-    color: 'bg-emerald-900 border-emerald-500 text-white'
-  },
-  {
-    id: 'chocolate',
-    name: 'Chocolate World',
-    icon: '🍫',
-    description: 'A yummy sweet world!',
-    character: 'A hungry little mouse',
-    setting: 'The Candyland Valley',
-    goal: 'Find the Golden Chocolate Bar',
-    mood: 'Yummy',
-    color: 'bg-orange-900 border-orange-500 text-white'
-  },
-  {
-    id: 'forest-friend',
-    name: 'Forest Friends',
-    icon: '🦊',
-    description: 'Find a buddy in the woods.',
-    character: 'Finnegan the Fox',
-    setting: 'The Whispering Woods',
-    goal: 'Find someone to play hide and seek with',
-    mood: 'Heartwarming',
-    color: 'bg-green-800 border-green-400 text-white'
+    id: 'underwater',
+    name: 'Ocean Adventure',
+    icon: '🧜‍♀️',
+    description: 'Dive into the deep blue mystery!',
+    character: 'A curious mermaid explorer',
+    setting: 'The Glow-in-the-Dark Coral Reef',
+    goal: 'Find the Pearl of Whispers',
+    mood: 'Magical',
+    color: 'from-blue-600 to-cyan-500'
   },
   {
     id: 'agent',
     name: 'Secret Agent',
     icon: '🕵️',
-    description: 'Solve a big mystery!',
-    character: 'Agent Sparkle',
-    setting: 'The Sky High Tower',
-    goal: 'Find the invisible key',
+    description: 'Solve a big mystery at HQ!',
+    character: 'Agent Sparkle the fox',
+    setting: 'The Sky High Gadget Tower',
+    goal: 'Stop the invisible bandit',
     mood: 'Mysterious',
-    color: 'bg-slate-900 border-slate-500 text-white'
+    color: 'from-slate-700 to-indigo-600'
   },
   {
-    id: 'underwater',
-    name: 'Ocean Mystery',
-    icon: '🧜‍♀️',
-    description: 'Dive into the deep blue!',
-    character: 'A curious dolphin',
-    setting: 'The Glow-in-the-Dark Coral Reef',
-    goal: 'Find the Pearl of Whispers',
-    mood: 'Magical',
-    color: 'bg-blue-900 border-blue-400 text-white'
-  },
-  {
-    id: 'dragon',
-    name: 'The Dragon\'s Cake',
-    icon: '🐉',
-    description: 'Help a friendly dragon!',
-    character: 'A clumsy little dragon',
-    setting: 'The Cloud Castle Kitchen',
-    goal: 'Bake the tallest birthday cake ever',
-    mood: 'Funny',
-    color: 'bg-rose-900 border-rose-400 text-white'
-  },
-  {
-    id: 'robot',
-    name: 'Robot School',
-    icon: '🤖',
-    description: 'A day with smart machines!',
-    character: 'Bot-2000',
-    setting: 'The High-Tech Tinkertown',
-    goal: 'Learn how to paint with oil paints',
-    mood: 'Curious',
-    color: 'bg-cyan-900 border-cyan-400 text-white'
+    id: 'horror',
+    name: 'Spooky Mansion',
+    icon: '👻',
+    description: 'A friendly ghost adventure!',
+    character: 'A brave child with a flashlight',
+    setting: 'The Giggle-Ghost Manor',
+    goal: 'Solve the case of the missing cookies',
+    mood: 'Spooky but fun',
+    color: 'from-purple-900 to-indigo-900'
   }
 ];
 

@@ -32,6 +32,7 @@ export interface Story {
   setting: string;
   goal: string;
   mood: string;
+  videoUrl?: string;
   aiMetadata?: {
     safetyFlags: string[];
     lastPrompt: string;

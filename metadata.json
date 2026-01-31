@@ -1,7 +1,5 @@
 {
   "name": "TinyTales Studio",
   "description": "A privacy-first, kid-safe story creation studio where children ages 5-12 can write, draw, and imagine with AI guidance.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "requestFramePermissions": []
 }
