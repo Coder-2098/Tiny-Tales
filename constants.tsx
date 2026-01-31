@@ -34,7 +34,8 @@ export const TEMPLATES: StoryTemplate[] = [
     setting: 'The Gigantic Wonky Chocolate Factory',
     goal: 'Find the recipe for the Never-Ending Lollipop',
     mood: 'Yummy & Fun',
-    color: 'from-amber-800 to-orange-500'
+    color: 'from-amber-800 to-orange-500',
+    startingText: "Deep in the heart of the city stood a factory that smelled like toasted marshmallows and melted fudge. Inside, a clever inventor adjusted their purple hat and looked at a river of swirling liquid chocolate. Today was the day to find the secret recipe for the Never-Ending Lollipop!"
   },
   {
     id: 'honey_forest',
@@ -45,7 +46,8 @@ export const TEMPLATES: StoryTemplate[] = [
     setting: 'The Hundred-Acre Sunbeam Forest',
     goal: 'Find a missing pot of sweet golden honey',
     mood: 'Sweet & Calm',
-    color: 'from-yellow-400 to-amber-600'
+    color: 'from-yellow-400 to-amber-600',
+    startingText: "In a forest where the sun always felt like a warm hug, a friendly yellow bear woke up with a very rumbly tummy. He checked his cupboard, but every single pot was empty! 'Oh bother,' he said, putting on his favorite red shirt. He needed to find some sweet golden honey, and he needed it now."
   },
   {
     id: 'berry_village',
@@ -56,7 +58,8 @@ export const TEMPLATES: StoryTemplate[] = [
     setting: 'The Strawberry Patch Village',
     goal: 'Bake the biggest berry pie for the festival',
     mood: 'Happy & Bright',
-    color: 'from-rose-500 to-pink-400'
+    color: 'from-rose-500 to-pink-400',
+    startingText: "Welcome to Berry Sweet Village, where the houses are shaped like giant strawberries and the air smells like fresh jam. A girl with bouncy red curls and a big pink hat stood in her kitchen. The Great Berry Festival was starting tomorrow, and she had a plan to bake the biggest, tastiest pie anyone had ever seen!"
   },
   {
     id: 'space_quest',
@@ -67,7 +70,8 @@ export const TEMPLATES: StoryTemplate[] = [
     setting: 'The Galaxy of Sparkling Planets',
     goal: 'Fix the spaceship and return to Earth',
     mood: 'Exciting & Grand',
-    color: 'from-indigo-900 to-blue-600'
+    color: 'from-indigo-900 to-blue-600',
+    startingText: "The countdown reached zero! With a giant WHOOSH, Ziggy's rocket ship blasted through the clouds and into a sea of twinkling stars. But suddenly, a strange purple light flashed on the dashboard. 'Uh oh,' Ziggy said, looking out at the Galaxy of Sparkling Planets. The engine was making a funny whistling sound!"
   },
   {
     id: 'underwater',
@@ -78,7 +82,8 @@ export const TEMPLATES: StoryTemplate[] = [
     setting: 'The Glow-in-the-Dark Coral Reef',
     goal: 'Find the Pearl of Whispers',
     mood: 'Magical',
-    color: 'from-blue-600 to-cyan-500'
+    color: 'from-blue-600 to-cyan-500',
+    startingText: "Deep beneath the waves, where the coral reefs glowed like neon lights, a curious mermaid swam past a group of giggling jellyfish. She had heard legends of the Pearl of Whispers hidden in a secret cave. With a flip of her tail, she set off on a quest to find the treasure!"
   },
   {
     id: 'agent',
@@ -89,18 +94,8 @@ export const TEMPLATES: StoryTemplate[] = [
     setting: 'The Sky High Gadget Tower',
     goal: 'Stop the invisible bandit',
     mood: 'Mysterious',
-    color: 'from-slate-700 to-indigo-600'
-  },
-  {
-    id: 'horror',
-    name: 'Spooky Mansion',
-    icon: '👻',
-    description: 'A friendly ghost adventure!',
-    character: 'A brave child with a flashlight',
-    setting: 'The Giggle-Ghost Manor',
-    goal: 'Solve the case of the missing cookies',
-    mood: 'Spooky but fun',
-    color: 'from-purple-900 to-indigo-900'
+    color: 'from-slate-700 to-indigo-600',
+    startingText: "High above the clouds in the Gadget Tower, Agent Sparkle the fox checked her high-tech watch. The alarm was beeping! Someone—or something—had sneaked into the top-secret cookie vault. It was time to use her invisible-ink scanner and catch the bandit!"
   }
 ];
 

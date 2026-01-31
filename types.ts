@@ -49,4 +49,5 @@ export interface StoryTemplate {
   goal: string;
   mood: string;
   color: string;
+  startingText: string;
 }
